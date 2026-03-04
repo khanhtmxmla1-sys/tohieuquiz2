@@ -1,0 +1,12 @@
+id,fullName,username,passwordHash,classId,parentPhone,createdAt,avatar,coins
+s-e767c0fe,Lò Thị Thanh Tâm,tam.ltt,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T01:59:30.106Z,girl_05,100
+s-7ccd4ac5,Quàng Minh Ngọc,ngoc.qm,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:00:05.416Z,girl_04,115
+s-de9ebd3c,Vì Văn Vĩnh,vinh.vv,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:00:42.299Z,,60
+s-44d748ea,Lò Thị Bảo Diễm,diem.ltb,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:01:00.138Z,girl_03,25
+s-fa8cb2f4,Lèo Văn Tuấn,tuan.lv,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:01:23.007Z,,
+s-4b06199e,Lèo Thị Thuý Ngọc,ngoc.ltt,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:01:43.734Z,ghost,25
+s-15bdf79f,Vì Thị Cẩm Tú,tu.vtc,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:02:09.020Z,,135
+s-0b452002,Lò Thị Ánh Tuyết,tuyet.lta,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:02:42.975Z,,
+s-5c3c27b1,Lèo Thị Thu Trang,trang.ltt,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:20:07.029Z,,
+s-c07714ad,Lèo Nhật Minh,minh.ln,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:20:36.647Z,,95
+s-dc4bac70,Lò Bảo Duy,duy.lb,8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92,c-e725273d,,2026-02-23T02:21:01.283Z,nerd,

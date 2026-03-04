@@ -1,0 +1,9 @@
+username,petId,petName,level,exp,expToNext,mood,items,lastActive
+duy.lb,cat_01,Mèo Con,1,,100,happy,[],2026-02-23T02:24:27.843Z
+tam.ltt,cat_01,Mèo Con,2,100,120,happy,[],2026-02-27T19:02:02.579Z
+tu.vtc,cat_01,Mèo Con,3,50,140,happy,[],2026-03-02T14:33:31.488Z
+ngoc.qm,cat_01,Mèo Con,3,10,140,happy,[],2026-03-01T08:08:23.288Z
+diem.ltb,cat_01,Mèo Con,1,50,100,excited,[],2026-02-26T12:43:29.611Z
+vinh.vv,cat_01,Mèo Con,2,20,120,excited,[],2026-03-02T13:20:53.303Z
+ngoc.ltt,cat_01,Mèo Con,7,110,220,happy,"[""bow_01"",""scarf_01""]",2026-03-02T10:27:56.582Z
+minh.ln,cat_01,Mèo Con,2,90,120,excited,[],2026-03-03T12:44:48.001Z
