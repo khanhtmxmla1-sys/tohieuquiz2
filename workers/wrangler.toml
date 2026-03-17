@@ -9,6 +9,4 @@ database_name = "itongquiz-db"
 database_id = "c9482e3c-ff73-4f14-84af-52e7b6a580f4"
 
 [vars]
-API_SECRET_TOKEN = "4e23be7934269856066e6a3c2062e33ae4cdcc98ace80ccb054796e119098cab"
 CLIPROXY_API = "https://api.thitong.site/v1"
-CLIPROXY_TOKEN = "sk-khanh20111989tom@"
