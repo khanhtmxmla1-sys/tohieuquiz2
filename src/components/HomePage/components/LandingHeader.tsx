@@ -13,7 +13,7 @@ const LandingHeader: React.FC = () => {
                 onClick={() => navigate('/')}
             >
                 <img
-                    src="/school-logo-v2.webp"
+                    src="/school-logo.png"
                     alt="ítOngQuiz logo"
                     className="w-11 h-11 object-contain"
                 />

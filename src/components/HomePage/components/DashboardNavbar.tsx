@@ -22,7 +22,7 @@ export const DashboardNavbar: React.FC<DashboardNavbarProps> = ({
                 {/* Logo */}
                 <div className="sticker-nav__logo" onClick={onResetHome}>
                     <img
-                        src="/school-logo-v2.webp"
+                        src="/school-logo.png"
                         alt="Ít Ong Quiz"
                         className="sticker-nav__logo-img w-10 h-10 object-contain"
                     />
