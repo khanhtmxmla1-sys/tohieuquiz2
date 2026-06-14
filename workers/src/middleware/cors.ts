@@ -13,6 +13,9 @@ const ALLOWED_ORIGINS = [
     'https://thitong.site',
     'https://www.thitong.site',
     'https://itongquiz1.vercel.app',
+    'https://thtohieu.com',
+    'https://www.thtohieu.com',
+    'https://tohieuquiz2.vercel.app',
 ];
 
 

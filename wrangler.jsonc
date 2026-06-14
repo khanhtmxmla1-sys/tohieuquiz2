@@ -1,0 +1,22 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "it-ong-primary-school-quiz-app",
+	"compatibility_date": "2026-06-14",
+	"observability": {
+		"enabled": true
+	},
+	"assets": {
+		"not_found_handling": "single-page-application"
+	},
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "y",
+			"database_name": "thtohieu",
+			"database_id": "596a4ef0-2f2f-4c94-957e-51cd441bc5cc",
+			"remote": true
+		}
+	]
+}

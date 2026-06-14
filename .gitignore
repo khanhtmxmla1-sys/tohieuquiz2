@@ -45,3 +45,8 @@ design_preview.html
 workers/.wrangler/
 .qwen/
 .env*
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
