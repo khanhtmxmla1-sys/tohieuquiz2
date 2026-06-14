@@ -1258,7 +1258,7 @@ const StudentDashboardUI: React.FC<StudentDashboardUIProps> = ({ ioeQuizzes = []
                         ))}
                     </div>
                 </section>
-                <div className="pb-12 text-center hidden md:block"><p className="text-slate-400 font-medium text-sm">ÍtOngQuiz © 2026 - Môi trường học tập tích cực</p></div>
+                <div className="pb-12 text-center hidden md:block"><p className="text-slate-400 font-medium text-sm">TôHiệuQuiz © 2026 - Môi trường học tập tích cực</p></div>
             </main>
 
             {/* --- MODALS --- */}

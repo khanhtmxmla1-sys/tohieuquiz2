@@ -14,11 +14,11 @@ const LandingHeader: React.FC = () => {
             >
                 <img
                     src="/school-logo.png"
-                    alt="ítOngQuiz logo"
+                    alt="TôHiệuQuiz logo"
                     className="w-11 h-11 object-contain"
                 />
                 <span className="font-extrabold text-[1.4rem]">
-                    <span className="text-[#1e3a8a]">ítong</span>
+                    <span className="text-[#1e3a8a]">TôHiệu</span>
                     <span className="text-[#FACC15]">Quiz</span>
                 </span>
             </div>
