@@ -105,15 +105,14 @@ async function main() {
   const apiUrl = (process.env.SITEMAP_API_URL || process.env.WORKERS_API_URL || process.env.VITE_WORKERS_API_URL || '').trim();
   const apiToken = (process.env.SITEMAP_API_TOKEN || process.env.API_SECRET_TOKEN || process.env.VITE_API_SECRET_TOKEN || '').trim();
 
-  if (!apiUrl) {
-    throw new Error('Missing API URL. Set SITEMAP_API_URL or WORKERS_API_URL or VITE_WORKERS_API_URL.');
-  }
-  if (!apiToken) {
-    throw new Error('Missing API token. Set SITEMAP_API_TOKEN (recommended) or API_SECRET_TOKEN.');
-  }
-
   const today = new Date().toISOString().slice(0, 10);
-  const quizzes = await fetchPublicQuizzes(apiUrl, apiToken);
+  let quizzes = [];
+
+  if (!apiUrl || !apiToken) {
+    console.warn('[sitemap] warning: API URL or token missing; generating sitemap with static pages only.');
+  } else {
+    quizzes = await fetchPublicQuizzes(apiUrl, apiToken);
+  }
 
   const categories = new Set(DEFAULT_CATEGORIES);
   quizzes.forEach((q) => {

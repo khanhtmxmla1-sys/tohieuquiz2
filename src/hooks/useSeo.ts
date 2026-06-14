@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Quiz } from '../types';
 
-const DEFAULT_TITLE = 'ItOng Quiz - Nền tảng tạo đề và ôn thi cho học sinh Tiểu học Ít Ong';
+const DEFAULT_TITLE = 'ToHieu Quiz - Nền tảng tạo đề và ôn thi cho học sinh Tiểu học Tô Hiệu';
 const DEFAULT_DESCRIPTION = 'ItOng Quiz giúp giáo viên tạo đề trắc nghiệm nhanh, hỗ trợ học sinh ôn thi chương trình GDPT 2018.';
-const DEFAULT_KEYWORDS = 'Ít Ong, ItOng Quiz, luyện thi tiểu học, trắc nghiệm tiểu học, GDPT 2018, ôn thi online';
+const DEFAULT_KEYWORDS = 'Tô Hiệu, ToHieu Quiz, luyện thi tiểu học, trắc nghiệm tiểu học, GDPT 2018, ôn thi online';
 const SEO_CATEGORY_WHITELIST = new Set(['all', 'vioedu', 'trang-nguyen', 'ioe', 'on-tap', 'toan', 'tieng-viet']);
 
 // SEO Utility Functions
@@ -72,7 +72,7 @@ const getCanonicalUrl = (pathname: string, view: string, selectedQuiz: Quiz | nu
 const buildStructuredData = (canonicalUrl: string, title: string, description: string, selectedQuiz: Quiz | null) => {
     const organization = {
         '@type': 'EducationalOrganization',
-        name: 'Trường Tiểu học Ít Ong',
+        name: 'Trường Tiểu học Tô Hiệu',
         alternateName: 'ItOng Quiz',
         url: 'https://www.thitong.site',
     };
@@ -130,13 +130,13 @@ export const useSeo = (
         let robots = 'index, follow';
 
         if (pathname === '/about') {
-            title = 'Giới thiệu trường Ít Ong - ItOng Quiz';
-            description = 'Thông tin giới thiệu Trường Tiểu học Ít Ong, quá trình phát triển và hoạt động nổi bật.';
-            keywords = 'giới thiệu trường Ít Ong, Trường Tiểu học Ít Ong, ItOng Quiz';
+            title = 'Giới thiệu trường Tô Hiệu - ToHieu Quiz';
+            description = 'Thông tin giới thiệu Trường Tiểu học Tô Hiệu, quá trình phát triển và hoạt động nổi bật.';
+            keywords = 'giới thiệu trường Tô Hiệu, Trường Tiểu học Tô Hiệu, ToHieu Quiz';
         } else if (pathname === '/contact') {
-            title = 'Liên hệ trường Ít Ong - ItOng Quiz';
-            description = 'Kênh liên hệ Trường Tiểu học Ít Ong: địa chỉ, hotline, fanpage và bản đồ.';
-            keywords = 'liên hệ trường Ít Ong, bản đồ trường Ít Ong, hotline trường Ít Ong';
+            title = 'Liên hệ trường Tô Hiệu - ToHieu Quiz';
+            description = 'Kênh liên hệ Trường Tiểu học Tô Hiệu: địa chỉ, hotline, fanpage và bản đồ.';
+            keywords = 'liên hệ trường Tô Hiệu, bản đồ trường Tô Hiệu, hotline trường Tô Hiệu';
         } else if (pathname === '/privacy') {
             title = 'Chính sách bảo mật - ItOng Quiz';
         } else if (pathname === '/tos') {
@@ -158,7 +158,7 @@ export const useSeo = (
             title = 'Cổng học sinh - ItOng Quiz';
             robots = 'noindex, nofollow, noarchive';
         } else if (view === 'shop' && isGiftShopFeatureEnabled) {
-            title = 'Tiệm Tạp Hóa Ít Ong - ItOng Quiz';
+            title = 'Tiệm Tạp Hóa Tô Hiệu - ToHieu Quiz';
             description = 'Đổi quà bằng xu và quản lý voucher trong hệ thống ItOng Quiz.';
             robots = 'noindex, nofollow, noarchive';
         }

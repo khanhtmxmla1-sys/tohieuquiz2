@@ -76,7 +76,7 @@ const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
 
                     <h2 className="text-xl font-bold text-slate-800 mt-8 mb-4">3. Chia sẻ thông tin</h2>
                     <p className="text-slate-600 leading-relaxed">
-                        iTong Quiz <strong>KHÔNG</strong> bán, trao đổi hoặc cho thuê thông tin cá nhân của người dùng cho bên thứ ba. Dữ liệu chỉ được chia sẻ trong phạm vi nội bộ Trường Tiểu học Ít Ong giữa giáo viên và học sinh/phụ huynh có liên quan.
+                        ToHieu Quiz <strong>KHÔNG</strong> bán, trao đổi hoặc cho thuê thông tin cá nhân của người dùng cho bên thứ ba. Dữ liệu chỉ được chia sẻ trong phạm vi nội bộ Trường Tiểu học Tô Hiệu giữa giáo viên và học sinh/phụ huynh có liên quan.
                     </p>
 
                     <h2 className="text-xl font-bold text-slate-800 mt-8 mb-4">4. Quyền của bạn</h2>

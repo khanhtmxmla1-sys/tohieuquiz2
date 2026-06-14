@@ -81,7 +81,7 @@ export const StudentFloatingSidebar: React.FC = () => {
                                         <Trophy className="w-8 h-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
                                     </div>
                                     <div>
-                                        <h2 className="text-2xl font-black text-white tracking-tight drop-shadow-md">Bảng Vàng Ít Ong</h2>
+                                        <h2 className="text-2xl font-black text-white tracking-tight drop-shadow-md">Bảng Vàng Tô Hiệu</h2>
                                         <p className="text-blue-300 text-sm font-medium">Top 10 ong chăm chỉ nhất</p>
                                     </div>
                                 </div>

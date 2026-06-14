@@ -585,7 +585,7 @@ function getTypeLabelPdf(type: QuestionType): string {
 
 async function exportPdf(opts: WorksheetExportOptions): Promise<void> {
     const { quiz, paperStyle, answerKey } = opts;
-    const schoolName = opts.schoolName || 'Trường Tiểu học Ít Ong';
+    const schoolName = opts.schoolName || 'Trường Tiểu học Tô Hiệu';
 
     try {
         const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
@@ -609,7 +609,7 @@ async function exportPdf(opts: WorksheetExportOptions): Promise<void> {
             doc.setFontSize(8);
             doc.setTextColor(150, 150, 150);
             doc.text(
-                `Trang ${p} / ${totalContentPages}  —  ${schoolName}  —  iTong Quiz`,
+                `Trang ${p} / ${totalContentPages}  —  ${schoolName}  —  toHieu Quiz`,
                 doc.internal.pageSize.getWidth() / 2,
                 doc.internal.pageSize.getHeight() - 7,
                 { align: 'center' }
@@ -633,7 +633,7 @@ async function exportPdf(opts: WorksheetExportOptions): Promise<void> {
 
 async function exportDocx(opts: WorksheetExportOptions): Promise<void> {
     const { quiz } = opts;
-    const schoolName = opts.schoolName || 'Trường Tiểu học Ít Ong';
+    const schoolName = opts.schoolName || 'Trường Tiểu học Tô Hiệu';
     const children: any[] = [];
     const cmw = (t: string) => cleanMath(t, true);
     const atw = (q: any) => getAnswerText(q, true);

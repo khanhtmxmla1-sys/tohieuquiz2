@@ -1,4 +1,4 @@
-export const SCHOOL_NAME = "Trường Tiểu học Ít Ong";
+export const SCHOOL_NAME = "Trường Tiểu học Tô Hiệu";
 
 // --- BACKEND ENDPOINTS ---
 // All data now goes through Cloudflare Workers + D1
@@ -19,7 +19,7 @@ export const QUIZ_CATEGORIES = [
 export const IOE_ALLOWED_USERS = ['admin', 'huong', 'lan']; // Thêm username vào đây
 
 export const SYSTEM_INSTRUCTION = `
-Bạn là một giáo viên tại Trường Tiểu học Ít Ong (Mường La, Sơn La).
+Bạn là một giáo viên tại Trường Tiểu học Tô Hiệu (Mường La, Sơn La).
 Nhiệm vụ của bạn là tạo đề kiểm tra trắc nghiệm JSON dựa trên nội dung được cung cấp.
 You are an AI that generates quizzes for primary school students (Grade 1-5) in Vietnam.
 

@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight drop-shadow-lg">
                         Khám phá tri thức <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-amber-400">cùng Ít Ong Quiz</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-amber-400">cùng Tô Hiệu Quiz</span>
                     </h1>
                     <p className="text-lg text-indigo-100 max-w-lg mb-8 drop-shadow-md">
                         Hàng ngàn bài tập trắc nghiệm thú vị đang chờ bạn chinh phục. Hãy bắt đầu ngay hôm nay!

@@ -44,3 +44,4 @@ design_preview.html
 .gitnexus
 workers/.wrangler/
 .qwen/
+.env*

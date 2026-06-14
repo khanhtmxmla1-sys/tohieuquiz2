@@ -118,7 +118,7 @@ const GiftShop: React.FC = () => {
                     </button>
                     <div className="flex items-center gap-2">
                         <Gift className="w-5 h-5 text-indigo-600" />
-                        <h1 className="text-lg md:text-xl font-black">Tiệm Tạp Hóa Ít Ong</h1>
+                        <h1 className="text-lg md:text-xl font-black">Tiệm Tạp Hóa Tô Hiệu</h1>
                     </div>
                     <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-3 py-1.5">
                         <Sparkles className="w-4 h-4 text-amber-500" />

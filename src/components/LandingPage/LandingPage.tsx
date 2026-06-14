@@ -240,7 +240,7 @@ const LandingPage: React.FC = () => {
                     <div className="relative z-10 space-y-8">
                         <h2 className="text-4xl md:text-5xl leading-tight serif-font">Bắt đầu luyện tập ngay hôm nay!</h2>
                         <p className="text-lg opacity-90">Gia nhập cộng đồng hơn 15,000 học sinh đang tiến bộ mỗi ngày cùng
-                            iTongQuiz.</p>
+                            toHieuQuiz.</p>
                         <button
                             onClick={() => setView('home')}
                             className="bg-white text-emerald-600 px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition shadow-2xl">Đăng
@@ -301,7 +301,7 @@ const LandingPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-50 text-center text-xs text-slate-400">
-                    © 2024 iTongQuiz Platform. Tất cả các quyền được bảo lưu.
+                    © 2024 toHieuQuiz Platform. Tất cả các quyền được bảo lưu.
                 </div>
             </footer>
         </div>

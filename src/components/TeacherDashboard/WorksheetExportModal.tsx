@@ -51,7 +51,7 @@ const WorksheetExportModal: React.FC<WorksheetExportModalProps> = ({ quiz, onClo
                 format,
                 paperStyle,
                 answerKey,
-                schoolName: 'Trường Tiểu học Ít Ong',
+                schoolName: 'Trường Tiểu học Tô Hiệu',
             });
             onClose();
         } catch (err) {
