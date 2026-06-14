@@ -67,11 +67,11 @@ const ContactPage: React.FC = () => {
                         </div>
                         <div className="rounded-[2rem] overflow-hidden border border-green-100 shadow-inner">
                             <iframe
-                                title="Bản đồ Mường La Sơn La"
+                                title="Bản đồ Phường Tô Hiệu Sơn La"
                                 className="w-full h-[400px]"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps?q=Muong+La+Son+La&output=embed"
+                                src="https://www.google.com/maps?q=Phuong+To+Hieu+Son+La&output=embed"
                             />
                         </div>
                     </div>

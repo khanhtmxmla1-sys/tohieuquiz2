@@ -127,7 +127,7 @@ const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true }) => {
                                 {SCHOOL_NAME}
                             </p>
                             <p className="text-emerald-800/70 text-xs leading-relaxed font-semibold mb-4">
-                                Xã Mường La, Tỉnh Sơn La, Việt Nam
+                                Phường Tô Hiệu, Sơn La, Việt Nam
                             </p>
                         </div>
                     </div>

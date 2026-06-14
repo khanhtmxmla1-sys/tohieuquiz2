@@ -296,7 +296,7 @@ const LandingPage: React.FC = () => {
                         <ul className="space-y-4 text-sm text-slate-500">
                             <li className="flex items-center gap-3">📧 admin@thitong.io.vn</li>
                             <li className="flex items-center gap-3">📞 0326439774</li>
-                            <li className="flex items-center gap-3">📍 Mường La, Sơn La</li>
+                            <li className="flex items-center gap-3">📍 Phường Tô Hiệu, Sơn La</li>
                         </ul>
                     </div>
                 </div>
