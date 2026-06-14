@@ -2,7 +2,7 @@ const { execSync } = require('node:child_process');
 const path = require('node:path');
 
 const cwd = path.resolve(__dirname, '..');
-const dbName = 'itongquiz-db';
+const dbName = 'thtohieu';
 const isRemote = process.argv.includes('--remote');
 const modeFlag = isRemote ? '--remote' : '--local';
 const modeLabel = isRemote ? 'REMOTE' : 'LOCAL';

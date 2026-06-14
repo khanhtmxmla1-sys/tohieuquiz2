@@ -6,11 +6,14 @@ name = "itongquiz-api"
 main = "src/index.ts"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+route = "thtohieu.com/*"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "itongquiz-db"
-database_id = "c9482e3c-ff73-4f14-84af-52e7b6a580f4"
+database_name = "thtohieu"
+database_id = "596a4ef0-2f2f-4c94-957e-51cd441bc5cc"
 
 [vars]
 CLIPROXY_API = "https://api.thitong.site/v1"

@@ -10,7 +10,7 @@ const WORKERS_DIR = process.cwd();
 const REPO_ROOT = path.resolve(WORKERS_DIR, '..');
 const DOCS_DIR = path.join(REPO_ROOT, 'docs');
 const README_FILE = path.join(REPO_ROOT, 'README.md');
-const DB_NAME = 'itongquiz-db';
+const DB_NAME = 'thtohieu';
 const MAX_CHARS_PER_CHUNK = 1200;
 const OVERLAP_CHARS = 180;
 

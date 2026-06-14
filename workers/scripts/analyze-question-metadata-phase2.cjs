@@ -4,7 +4,7 @@ const { writeBackfillReport } = require('./metadata-backfill-report-utils.cjs');
 const { buildPhase2ReviewRow } = require('./question-metadata-phase2-review-utils.cjs');
 
 const cwd = path.resolve(__dirname, '..');
-const dbName = 'itongquiz-db';
+const dbName = 'thtohieu';
 const isRemote = process.argv.includes('--remote');
 const modeFlag = isRemote ? '--remote' : '--local';
 const modeLabel = isRemote ? 'REMOTE' : 'LOCAL';

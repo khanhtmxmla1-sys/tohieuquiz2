@@ -4,7 +4,7 @@ const { inferMetadataFromTags } = require('./question-metadata-backfill-map.v1.c
 const { writeBackfillReport } = require('./metadata-backfill-report-utils.cjs');
 
 const cwd = path.resolve(__dirname, '..');
-const dbName = 'itongquiz-db';
+const dbName = 'thtohieu';
 const isRemote = process.argv.includes('--remote');
 const modeFlag = isRemote ? '--remote' : '--local';
 const modeLabel = isRemote ? 'REMOTE' : 'LOCAL';
