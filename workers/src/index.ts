@@ -227,12 +227,25 @@ async function handleLegacyGasRequest(request: Request, env: Env): Promise<Respo
         return errorResponse('Invalid JSON body');
     }
 
-    // Verify token from body (GAS style)
-    if (body.token !== env.API_SECRET_TOKEN) {
+    const action = body.action;
+    
+    // Public actions that don't require token validation (authentication endpoints, public reads)
+    // Homework actions need to be accessible to students (JWT auth handled in route handlers)
+    const publicActions = [
+        'student_login',
+        'get_quizzes',
+        'get_questions',
+        'get_results',
+        'get_hw_assignments',
+        'get_hw_submissions',
+        'submit_hw'
+    ];
+    
+    // Verify token from body (GAS style) only for non-public actions
+    if (!publicActions.includes(action) && body.token !== env.API_SECRET_TOKEN) {
         return errorResponse('Unauthorized: Invalid Token', 401);
     }
 
-    const action = body.action;
     const db = env.DB;
 
     return await handleLegacyAction(db, action, body);
