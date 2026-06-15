@@ -6,12 +6,8 @@ name = "itongquiz-api"
 main = "src/index.ts"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
-workers_dev = false
+workers_dev = true
 preview_urls = false
-routes = [
-    { pattern = "thtohieu.com/api/*", zone_name = "thtohieu.com" },
-    { pattern = "www.thtohieu.com/api/*", zone_name = "thtohieu.com" }
-]
 
 [[d1_databases]]
 binding = "DB"
