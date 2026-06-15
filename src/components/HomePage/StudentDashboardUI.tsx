@@ -833,75 +833,101 @@ const StudentDashboardUI: React.FC<StudentDashboardUIProps> = ({ ioeQuizzes = []
     };
 
     return (
-        <div className="min-h-dvh bg-[#F4F7FC] font-sans text-slate-800 flex flex-col items-center">
-            {/* --- NAVBAR --- */}
-            <header className="w-full bg-white shadow-sm border-b border-slate-100 sticky top-0 z-40">
-                <div className="max-w-7xl mx-auto px-3 md:px-8 h-16 md:h-20 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <img src="/school-logo.png" alt="School logo ToHieu Quiz" className="w-10 h-10 object-contain drop-shadow-md" />
-                        <span className="text-xl md:text-2xl font-black tracking-tight text-slate-800">
-                            TôHiệu<span className="text-orange-500">Quiz</span>
-                        </span>
+        <div className="min-h-screen bg-[#F8F9FF] text-[#0B1C30] font-sans flex">
+            {/* --- SIDEBAR NAVIGATION (Desktop) --- */}
+            <aside className="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-[#EFF4FF] shadow-md py-6 z-50">
+                <div className="px-6 mb-10">
+                    <h1 className="text-2xl font-black text-[#004AC6]">ItongQuiz</h1>
+                </div>
+                <div className="flex items-center px-6 mb-8 gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[#2563EB] overflow-hidden cursor-pointer" onClick={() => setIsAvatarModalOpen(true)}>
+                        <img 
+                            src={studentSession.avatar ? getAvatarUrl(studentSession.avatar) : getAvatarUrl('default')} 
+                            alt="Student avatar" 
+                            className="w-full h-full object-cover" 
+                        />
                     </div>
-
-                    <div className="flex items-center gap-2 md:gap-8">
-                        <div className="flex items-center gap-2 md:gap-4">
-                            <div className="flex items-center gap-1.5 bg-amber-50 px-2 md:px-3 py-1.5 rounded-full border border-amber-200">
-                                <span className="text-amber-500 font-bold flex items-center gap-1 text-sm md:text-base">
-                                    <Trophy className="w-3.5 h-3.5 md:w-4 md:h-4" /> {pet?.level || 1}
-                                </span>
-                                <span className="hidden md:inline text-xs uppercase font-bold text-amber-600">Cấp bậc</span>
-                            </div>
-                            <div className="flex items-center gap-1.5 bg-yellow-50 px-2 md:px-3 py-1.5 rounded-full border border-yellow-200">
-                                <span className="text-yellow-600 font-bold flex items-center gap-1 text-sm md:text-base">
-                                    <Star className="w-3.5 h-3.5 md:w-4 md:h-4 fill-yellow-500" /> {coins}
-                                </span>
-                                <span className="hidden md:inline text-xs uppercase font-bold text-yellow-700">Xu</span>
-                            </div>
-                        </div>
-
-                        {giftShopEnabled && (
-                            <button type="button" onClick={handleOpenGiftShop} className="inline-flex items-center gap-2 px-2.5 md:px-3 py-1.5 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 text-xs md:text-sm font-black hover:bg-indigo-100 transition-colors">
-                                <Gift className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                                <span className="hidden md:inline">Tiệm Tạp Hóa</span>
-                            </button>
-                        )}
-
-                        <button type="button" onClick={() => setIsJoinLiveExamModalOpen(true)} className="inline-flex items-center gap-2 px-2.5 md:px-3 py-1.5 rounded-full border border-red-200 bg-red-50 text-red-700 text-xs md:text-sm font-black hover:bg-red-100 transition-colors animate-pulse">
-                            <Radio className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                            <span className="hidden md:inline">Thi Trực Tiếp</span>
-                        </button>
-
-                        <div className="flex items-center gap-3 border-l pl-3 md:pl-4 border-slate-200">
-                            <button onClick={handleLogout} className="sm:hidden h-9 px-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-600 bg-white">Đăng xuất</button>
-                            <div className="flex flex-col items-end hidden sm:flex">
-                                <span className="font-bold text-sm leading-tight text-slate-700">{studentSession.fullName}</span>
-                                <span className="text-xs text-slate-500 font-medium">{studentSession.className || 'Học sinh'}</span>
-                            </div>
-                            <div className="relative group cursor-pointer" onClick={() => setIsAvatarModalOpen(true)}>
-                                <div className="relative overflow-hidden rounded-full border-2 border-indigo-100 group-hover:border-indigo-400 transition-all shadow-sm">
-                                    <img src={studentSession.avatar ? getAvatarUrl(studentSession.avatar) : getAvatarUrl('default')} className="w-9 h-9 md:w-10 md:h-10 object-cover group-hover:scale-110 transition-transform" alt="Avatar" />
-                                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <Camera className="w-4 h-4 text-white" />
-                                    </div>
-                                </div>
-                                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-right scale-95 group-hover:scale-100 pt-2 pb-2 z-50" onClick={(e) => e.stopPropagation()}>
-                                    <div className="px-4 py-2 border-b border-slate-50 mb-1">
-                                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Tài khoản</p>
-                                        <p className="text-sm font-bold text-slate-700 block sm:hidden truncate">{studentSession.fullName}</p>
-                                    </div>
-                                    <button onClick={openChangePasswordModal} className="w-full text-left px-4 py-2 text-sm font-bold text-slate-700 hover:bg-slate-50 transition-colors flex items-center gap-2">
-                                        <KeyRound className="w-4 h-4 text-slate-500" /> Đổi mật khẩu
-                                    </button>
-                                    <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-sm font-bold text-red-500 hover:bg-red-50 transition-colors flex items-center gap-2">Đăng xuất</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <p className="text-base font-bold text-[#0B1C30]">{studentSession.fullName.split(' ').slice(-2).join(' ')}</p>
+                        <p className="text-xs text-[#434655]">{studentSession.className || 'Học sinh'}</p>
                     </div>
                 </div>
-            </header>
+                <nav className="flex-grow space-y-1 px-2">
+                    <div className="bg-[#2563EB] text-white rounded-xl flex items-center p-3 cursor-pointer">
+                        <Rocket className="w-5 h-5 mr-3" />
+                        <span className="text-sm font-bold">Hành trình</span>
+                    </div>
+                    <div className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                        <Target className="w-5 h-5 mr-3" />
+                        <span className="text-sm">Nhiệm vụ</span>
+                    </div>
+                    {giftShopEnabled && (
+                        <div onClick={handleOpenGiftShop} className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                            <Gift className="w-5 h-5 mr-3" />
+                            <span className="text-sm">Cửa hàng</span>
+                        </div>
+                    )}
+                    <div onClick={() => setIsBadgeGalleryOpen(true)} className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                        <Medal className="w-5 h-5 mr-3" />
+                        <span className="text-sm">Thành tích</span>
+                    </div>
+                    <div className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                        <BookOpen className="w-5 h-5 mr-3" />
+                        <span className="text-sm">Luyện tập</span>
+                    </div>
+                </nav>
+                <div className="mt-auto px-2 space-y-1">
+                    <button 
+                        onClick={openAttendanceModal}
+                        disabled={attendanceClaimed}
+                        className={`w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 mb-4 transition-opacity ${
+                            attendanceClaimed 
+                                ? 'bg-emerald-500 text-white cursor-default' 
+                                : 'bg-[#004AC6] text-white hover:opacity-90'
+                        }`}
+                    >
+                        <ShieldCheck className="w-5 h-5" />
+                        {attendanceClaimed ? 'Đã điểm danh' : 'Làm bài ngay'}
+                    </button>
+                    <div onClick={openChangePasswordModal} className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                        <KeyRound className="w-5 h-5 mr-3" />
+                        <span className="text-sm">Cài đặt</span>
+                    </div>
+                    <div onClick={handleLogout} className="text-[#434655] flex items-center p-3 rounded-xl hover:bg-[#D3E4FE] transition-all cursor-pointer">
+                        <span className="material-symbols-outlined text-xl mr-3">logout</span>
+                        <span className="text-sm">Đăng xuất</span>
+                    </div>
+                </div>
+            </aside>
 
-            <main className="w-full max-w-7xl mx-auto px-3 md:px-8 py-5 md:py-12 flex-1 flex flex-col gap-7 md:gap-10">
+            {/* --- MAIN CONTENT AREA --- */}
+            <main className="md:ml-64 transition-all duration-300 min-h-screen flex-1">
+                {/* --- TOP NAVBAR --- */}
+                <header className="sticky top-0 z-40 bg-white shadow-sm flex justify-between items-center w-full px-4 md:px-10 py-4">
+                    <div className="flex items-center gap-8">
+                        <div className="md:hidden font-bold text-[#004AC6] text-xl">ItongQuiz</div>
+                        <nav className="hidden md:flex items-center gap-6">
+                            <span className="text-[#004AC6] border-b-2 border-[#004AC6] font-bold text-xs py-1">Cấp bậc</span>
+                            <span className="text-[#434655] flex items-center gap-2 text-xs hover:text-[#004AC6] transition-colors cursor-pointer">
+                                <Star className="w-4 h-4 fill-yellow-500" /> {coins} Xu
+                            </span>
+                            {giftShopEnabled && (
+                                <span onClick={handleOpenGiftShop} className="text-[#434655] flex items-center gap-2 text-xs hover:text-[#004AC6] transition-colors cursor-pointer">Tiệm Tạp Hóa</span>
+                            )}
+                            <span onClick={() => setIsJoinLiveExamModalOpen(true)} className="text-[#434655] flex items-center gap-2 text-xs hover:text-[#004AC6] transition-colors cursor-pointer animate-pulse">
+                                <Radio className="w-4 h-4" /> Thi Trực Tiếp
+                            </span>
+                        </nav>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E5EEFF] border border-[#C3C6D7]/30">
+                            <Trophy className="w-4 h-4 text-[#004AC6]" />
+                            <span className="text-xs font-bold text-[#0B1C30]">{studentSession.fullName.split(' ').pop()}</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div className="px-4 md:px-10 py-8 max-w-[1280px] mx-auto">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full bg-gradient-to-r from-indigo-600 to-blue-500 rounded-[24px] md:rounded-[32px] p-5 sm:p-6 md:p-12 relative overflow-hidden shadow-lg shadow-indigo-200">
                     <div className="absolute right-0 top-0 w-1/2 h-full opacity-10 pointer-events-none">
                         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -1259,7 +1285,30 @@ const StudentDashboardUI: React.FC<StudentDashboardUIProps> = ({ ioeQuizzes = []
                     </div>
                 </section>
                 <div className="pb-12 text-center hidden md:block"><p className="text-slate-400 font-medium text-sm">TôHiệuQuiz © 2026 - Môi trường học tập tích cực</p></div>
+                </div>
             </main>
+
+            {/* --- MOBILE BOTTOM NAVIGATION --- */}
+            <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.05)] px-6 py-3 flex justify-between items-center z-50">
+                <div className="flex flex-col items-center gap-1 text-[#004AC6] cursor-pointer">
+                    <Rocket className="w-5 h-5" />
+                    <span className="text-[10px] font-bold">Hành trình</span>
+                </div>
+                <div className="flex flex-col items-center gap-1 text-[#434655] cursor-pointer">
+                    <Target className="w-5 h-5" />
+                    <span className="text-[10px] font-medium">Nhiệm vụ</span>
+                </div>
+                {giftShopEnabled && (
+                    <div onClick={handleOpenGiftShop} className="flex flex-col items-center gap-1 text-[#434655] cursor-pointer">
+                        <Gift className="w-5 h-5" />
+                        <span className="text-[10px] font-medium">Cửa hàng</span>
+                    </div>
+                )}
+                <div onClick={() => setIsBadgeGalleryOpen(true)} className="flex flex-col items-center gap-1 text-[#434655] cursor-pointer">
+                    <Medal className="w-5 h-5" />
+                    <span className="text-[10px] font-medium">Kỷ lục</span>
+                </div>
+            </nav>
 
             {/* --- MODALS --- */}
             <AnimatePresence>
