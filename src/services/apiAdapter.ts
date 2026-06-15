@@ -203,7 +203,13 @@ export const callApi = async <T = any>(action: string, payload: Record<string, a
                           path.startsWith('/api/results') ||
                           path === '/api/validate' ||
                           path.startsWith('/api/quizzes') ||
-                          path.startsWith('/api/questions');
+                          path.startsWith('/api/questions') ||
+                          // NEW: Migrated to JWT authentication
+                          path === '/api/system-settings' ||
+                          path.startsWith('/api/leaderboard') ||
+                          path.startsWith('/api/game-state') ||
+                          path.startsWith('/api/gift-shop') ||
+                          path.startsWith('/api/shop');
 
         if (!isJWTRoute && API_SECRET_TOKEN) {
             (fetchOptions.headers as Record<string, string>)['X-API-Token'] = API_SECRET_TOKEN;

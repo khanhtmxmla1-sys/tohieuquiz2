@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ClipboardCopy, Gift, Loader2, Receipt, Sparkles } from 'lucide-react';
-import { useQuizStore } from '../../stores/useQuizStore';
+import { useQuizStore } from '../../../stores/quizStore';
 import { useClassroomStore } from '../../stores/useClassroomStore';
 import { useGamificationStore } from '../../stores/useGamificationStore';
 import { useGiftShopStore } from '../../stores/useGiftShopStore';

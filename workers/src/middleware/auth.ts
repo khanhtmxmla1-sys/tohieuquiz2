@@ -47,7 +47,19 @@ export function verifyToken(request: Request, env: Env): Response | null {
     // 12. SECURITY: Live Exam routes use JWT authentication (handled in liveExam.ts)
     if (path.startsWith('/api/live-exam')) return null;
 
-    // 13. Verify token from header for REST API routes (legacy auth for non-JWT routes)
+    // 13. SECURITY: System settings routes use JWT authentication (handled in systemSettings.ts)
+    if (path.startsWith('/api/system-settings')) return null;
+
+    // 14. SECURITY: Leaderboard routes use JWT authentication (handled in gamification.ts)
+    if (path.startsWith('/api/leaderboard')) return null;
+
+    // 15. SECURITY: Game state routes use JWT authentication (handled in gamification.ts)
+    if (path.startsWith('/api/game-state')) return null;
+
+    // 16. SECURITY: Gift shop and shop routes use JWT authentication (handled in giftShop.ts and gamification.ts)
+    if (path.startsWith('/api/gift-shop') || path.startsWith('/api/shop')) return null;
+
+    // 17. Verify token from header for REST API routes (legacy auth for remaining non-JWT routes)
     const headerToken = request.headers.get('X-API-Token') || request.headers.get('Authorization')?.replace('Bearer ', '');
 
     if (headerToken === env.API_SECRET_TOKEN) return null;

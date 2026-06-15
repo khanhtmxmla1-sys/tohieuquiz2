@@ -1,6 +1,8 @@
 import { Env } from '../types';
 import { errorResponse, jsonResponse } from '../utils/response';
 import { parseBody } from '../utils/helpers';
+import { verifyJWTMiddleware, requireAdmin } from '../middleware/jwtAuth';
+import { JWTPayload } from '../utils/jwt';
 
 type SystemSettingRow = {
     setting_key: string;
@@ -68,12 +70,18 @@ export async function handleSystemSettingsRoutes(request: Request, env: Env, pat
     }
 
     if (method === 'POST') {
+        // SECURITY: Verify JWT token and require admin role
+        const authResult = await verifyJWTMiddleware(request, env);
+        if (authResult instanceof Response) return authResult;
+        const { user } = authResult; // Extract user from { user: JWTPayload }
+
+        // Only admins can modify system settings
+        if (!(await isAdminActor(db, user.username))) {
+            return errorResponse('Forbidden: Admin role required', 403);
+        }
+
         const body = await parseBody(request);
         if (!body) return errorResponse('Invalid JSON body');
-
-        const actorUsername = String(body.actorUsername || '').trim();
-        if (!actorUsername) return errorResponse('Missing actorUsername');
-        if (!(await isAdminActor(db, actorUsername))) return errorResponse('Forbidden', 403);
 
         const aiAssistantEnabled = parseBool(body.aiAssistantEnabled, true);
         const now = new Date().toISOString();

@@ -3,6 +3,8 @@
 import { Env } from '../types';
 import { jsonResponse, errorResponse } from '../utils/response';
 import { mapPetData, mapShopItem, parseBody } from '../utils/helpers';
+import { verifyJWTMiddleware, isStudent } from '../middleware/jwtAuth';
+import { JWTPayload } from '../utils/jwt';
 
 const ATTENDANCE_BASE_REWARD = { exp: 50, coins: 50 };
 
@@ -177,6 +179,13 @@ const applyGameStateReward = async (
 export async function handleGamificationRoutes(request: Request, env: Env, path: string, method: string): Promise<Response> {
     const db = env.DB;
     const url = new URL(request.url);
+
+    // SECURITY: Verify JWT token for authentication
+    // Public read-only routes (leaderboards) just need valid JWT, not specific username
+    // Write routes (game-state, shop/buy) will use JWT username
+    const authResult = await verifyJWTMiddleware(request, env);
+    if (authResult instanceof Response) return authResult;
+    const { user } = authResult; // Authenticated user from JWT
 
     // GET /api/pets?username=X
     if (path === '/api/pets' && method === 'GET') {

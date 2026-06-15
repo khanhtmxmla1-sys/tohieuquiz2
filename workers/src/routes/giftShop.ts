@@ -1,6 +1,8 @@
 import { Env } from '../types';
 import { errorResponse, generateId, jsonResponse } from '../utils/response';
 import { extractIdFromPath, parseBody } from '../utils/helpers';
+import { verifyJWTMiddleware, requireTeacher, isStudent } from '../middleware/jwtAuth';
+import { JWTPayload } from '../utils/jwt';
 
 type GiftOrderStatus = 'CREATED' | 'VOUCHER_ISSUED' | 'DELIVERED' | 'CANCELLED_REFUNDED';
 
@@ -192,6 +194,12 @@ const ensureCatalogSeed = async (db: D1Database) => {
 export async function handleGiftShopRoutes(request: Request, env: Env, path: string, method: string): Promise<Response> {
     const db = env.DB;
     const url = new URL(request.url);
+
+    // SECURITY: Verify JWT token for authentication
+    // All gift shop routes require authentication (students for purchase, teachers for management)
+    const authResult = await verifyJWTMiddleware(request, env);
+    if (authResult instanceof Response) return authResult;
+    const { user } = authResult; // Authenticated user from JWT
 
     if (path === '/api/gift-shop/catalog' && method === 'GET') {
         await ensureCatalogSeed(db);

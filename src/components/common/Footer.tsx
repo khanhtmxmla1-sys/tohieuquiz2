@@ -7,14 +7,16 @@ export type FooterRoutePath = '/' | '/about' | '/contact' | '/privacy' | '/tos';
 interface Props {
     onNavigate: (path: FooterRoutePath) => void;
     showPublicLinks?: boolean;
+    variant?: 'default' | 'studentDashboard';
 }
 
-const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true }) => {
+const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true, variant = 'default' }) => {
     const currentYear = new Date().getFullYear();
+    const isStudentDashboard = variant === 'studentDashboard';
 
     return (
         <footer 
-            className="relative pt-16 pb-12 px-6 overflow-hidden"
+            className={`relative overflow-hidden ${isStudentDashboard ? 'md:ml-64 px-4 md:px-10 py-12' : 'px-6 pt-16 pb-12'}`}
             style={{ 
                 fontFamily: "'Baloo 2', sans-serif",
                 background: 'rgba(220, 252, 231, 0.6)',
@@ -27,8 +29,8 @@ const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true }) => {
             <div className="absolute top-0 left-0 w-32 h-32 opacity-5 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 bg-green-900 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-48 h-48 opacity-5 pointer-events-none transform translate-x-1/3 translate-y-1/3 bg-green-800 rounded-full blur-3xl"></div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div className={`${isStudentDashboard ? 'max-w-[1280px]' : 'max-w-7xl'} mx-auto relative z-10`}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     {/* Brand Section */}
                     <div className="flex flex-col gap-6">
                         <div 

@@ -179,6 +179,7 @@ const App: React.FC = () => {
         navigate(path);
     };
 
+    const isStudentDashboardFooter = Boolean(classroomStore.studentSession) && quizStore.view === 'home' && location.pathname === '/';
     const showPublicFooterLinks = !authStore.isLoggedIn && !classroomStore.studentSession;
     const showChatbot = aiAssistantEnabled && quizStore.view !== 'student';
 
@@ -240,7 +241,11 @@ const App: React.FC = () => {
                             onRefreshIoe={() => loadIoeData(true)}
                         />
                     </main>
-                    <Footer onNavigate={handleRouteNavigate} showPublicLinks={showPublicFooterLinks} />
+                    <Footer
+                        onNavigate={handleRouteNavigate}
+                        showPublicLinks={showPublicFooterLinks}
+                        variant={isStudentDashboardFooter ? 'studentDashboard' : 'default'}
+                    />
                 </div>
             </Suspense>
         );
