@@ -29,7 +29,7 @@ const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
                 {/* Content */}
                 <div className="p-8 prose prose-slate max-w-none">
                     <p className="text-lg text-slate-600 leading-relaxed">
-                        Chào mừng bạn đến với <strong>iTong Quiz</strong>. Chúng tôi rất coi trọng quyền riêng tư của bạn và cam kết bảo vệ thông tin cá nhân của học sinh cũng như giáo viên.
+                        Chào mừng bạn đến với <strong>TôHiệuQuiz</strong>. Chúng tôi rất coi trọng quyền riêng tư của bạn và cam kết bảo vệ thông tin cá nhân của học sinh cũng như giáo viên.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
@@ -76,7 +76,7 @@ const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
 
                     <h2 className="text-xl font-bold text-slate-800 mt-8 mb-4">3. Chia sẻ thông tin</h2>
                     <p className="text-slate-600 leading-relaxed">
-                        ToHieu Quiz <strong>KHÔNG</strong> bán, trao đổi hoặc cho thuê thông tin cá nhân của người dùng cho bên thứ ba. Dữ liệu chỉ được chia sẻ trong phạm vi nội bộ Trường Tiểu học Tô Hiệu giữa giáo viên và học sinh/phụ huynh có liên quan.
+                        TôHiệuQuiz <strong>KHÔNG</strong> bán, trao đổi hoặc cho thuê thông tin cá nhân của người dùng cho bên thứ ba. Dữ liệu chỉ được chia sẻ trong phạm vi nội bộ Trường Tiểu học Tô Hiệu giữa giáo viên và học sinh/phụ huynh có liên quan.
                     </p>
 
                     <h2 className="text-xl font-bold text-slate-800 mt-8 mb-4">4. Quyền của bạn</h2>

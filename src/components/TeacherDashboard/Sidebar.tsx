@@ -149,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                             />
                         </div>
                         <span className="text-2xl font-black tracking-tight text-slate-900">
-                            iTong<span className="text-blue-600">Quiz</span>
+                            TôHiệu<span className="text-blue-600">Quiz</span>
                         </span>
                     </div>
                 </div>

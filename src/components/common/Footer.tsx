@@ -42,7 +42,7 @@ const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true }) => {
                                 onError={(e) => { (e.target as HTMLImageElement).src = '/school-logo.png'; }}
                             />
                             <span className="text-2xl font-extrabold tracking-tight">
-                                <span style={{ color: '#1e3a8a' }}>ítong</span><span style={{ color: '#FACC15' }}>Quiz</span>
+                                <span style={{ color: '#1e3a8a' }}>TôHiệu</span><span style={{ color: '#FACC15' }}>Quiz</span>
                             </span>
                         </div>
                         <p className="text-emerald-900/80 text-sm font-medium leading-relaxed max-w-xs">

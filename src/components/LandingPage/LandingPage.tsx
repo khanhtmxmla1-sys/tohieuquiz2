@@ -31,9 +31,9 @@ const LandingPage: React.FC = () => {
             <header className="sticky top-0 z-50 bg-[#FDFCF7]/80 backdrop-blur-md border-b border-slate-200">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-sage rounded-lg flex items-center justify-center text-white font-bold">iT</div>
+                        <div className="w-8 h-8 bg-sage rounded-lg flex items-center justify-center text-white font-bold">TH</div>
                         <span className="text-xl font-bold tracking-tight">
-                            <span style={{ color: '#1e3a8a' }}>ítong</span><span style={{ color: '#FACC15' }}>Quiz</span>
+                            <span style={{ color: '#1e3a8a' }}>TôHiệu</span><span style={{ color: '#FACC15' }}>Quiz</span>
                         </span>
                     </div>
 
@@ -240,7 +240,7 @@ const LandingPage: React.FC = () => {
                     <div className="relative z-10 space-y-8">
                         <h2 className="text-4xl md:text-5xl leading-tight serif-font">Bắt đầu luyện tập ngay hôm nay!</h2>
                         <p className="text-lg opacity-90">Gia nhập cộng đồng hơn 15,000 học sinh đang tiến bộ mỗi ngày cùng
-                            toHieuQuiz.</p>
+                            TôHiệuQuiz.</p>
                         <button
                             onClick={() => setView('home')}
                             className="bg-white text-emerald-600 px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition shadow-2xl">Đăng
@@ -256,10 +256,10 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
                     <div className="space-y-6">
                         <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-sage rounded-lg flex items-center justify-center text-white font-bold">iT
+                            <div className="w-8 h-8 bg-sage rounded-lg flex items-center justify-center text-white font-bold">TH
                             </div>
                             <span className="text-xl font-bold tracking-tight">
-                                <span style={{ color: '#1e3a8a' }}>ítong</span><span style={{ color: '#FACC15' }}>Quiz</span>
+                                <span style={{ color: '#1e3a8a' }}>TôHiệu</span><span style={{ color: '#FACC15' }}>Quiz</span>
                             </span>
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed">Nền tảng giúp học sinh nắm vững kiến thức thông qua
@@ -301,7 +301,7 @@ const LandingPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-50 text-center text-xs text-slate-400">
-                    © 2024 toHieuQuiz Platform. Tất cả các quyền được bảo lưu.
+                    © 2024 TôHiệuQuiz Platform. Tất cả các quyền được bảo lưu.
                 </div>
             </footer>
         </div>

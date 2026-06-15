@@ -35,7 +35,7 @@ const TermsOfService: React.FC<Props> = ({ onBack }) => {
                             </div>
                             <div className="ml-3">
                                 <p className="text-sm text-amber-700">
-                                    Việc bạn truy cập và sử dụng iTong Quiz đồng nghĩa với việc bạn chấp thuận các điều khoản bên dưới.
+                                    Việc bạn truy cập và sử dụng TôHiệuQuiz đồng nghĩa với việc bạn chấp thuận các điều khoản bên dưới.
                                 </p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const TermsOfService: React.FC<Props> = ({ onBack }) => {
                         <CheckCircle className="w-5 h-5 text-green-500" /> 1. Chấp thuận Điều khoản
                     </h2>
                     <p className="text-slate-600 mb-6">
-                        ToHieu Quiz là nền tảng luyện thi trực tuyến được quản lý bởi Trường Tiểu học Tô Hiệu. Bằng việc sử dụng hệ thống, học sinh và giáo viên cam kết tuân thủ các quy định về học tập và bảo mật thông tin.
+                        TôHiệuQuiz là nền tảng luyện thi trực tuyến được quản lý bởi Trường Tiểu học Tô Hiệu. Bằng việc sử dụng hệ thống, học sinh và giáo viên cam kết tuân thủ các quy định về học tập và bảo mật thông tin.
                     </p>
 
                     <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
@@ -61,7 +61,7 @@ const TermsOfService: React.FC<Props> = ({ onBack }) => {
                         <CheckCircle className="w-5 h-5 text-green-500" /> 3. Quyền sở hữu trí tuệ
                     </h2>
                     <p className="text-slate-600 mb-6 leading-relaxed">
-                        Mọi nội dung đề thi, hình ảnh, âm thanh và mã nguồn của ToHieu Quiz đều thuộc quyền sở hữu của Trường Tiểu học Tô Hiệu hoặc các đối tác cung cấp dịch vụ. Người dùng chỉ được phép sử dụng cho mục đích học tập cá nhân, không được phép sao chép thương mại.
+                        Mọi nội dung đề thi, hình ảnh, âm thanh và mã nguồn của TôHiệuQuiz đều thuộc quyền sở hữu của Trường Tiểu học Tô Hiệu hoặc các đối tác cung cấp dịch vụ. Người dùng chỉ được phép sử dụng cho mục đích học tập cá nhân, không được phép sao chép thương mại.
                     </p>
 
                     <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
