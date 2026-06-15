@@ -163,80 +163,6 @@ export const callApi = async <T = any>(action: string, payload: Record<string, a
         case 'get_system_settings': method = 'GET'; path = '/api/system-settings'; break;
         case 'save_system_settings': method = 'POST'; path = '/api/system-settings'; break;
 
-        // --- Live Exam ---
-        case 'get_live_exam_sessions':
-            method = 'GET';
-            path = `/api/live-exam/teacher/${encodeURIComponent(payload.teacherUsername)}/sessions`;
-            break;
-        case 'create_live_exam_session':
-            method = 'POST';
-            path = '/api/live-exam/create';
-            break;
-        case 'get_live_exam_session':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}`;
-            break;
-        case 'control_live_exam_session':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/control`;
-            break;
-        case 'delete_live_exam_session':
-            method = 'DELETE';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}`;
-            break;
-        case 'get_live_exam_participants':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/participants`;
-            break;
-        case 'join_live_exam':
-            method = 'POST';
-            path = '/api/live-exam/join';
-            break;
-        case 'get_live_exam_status':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/status`;
-            break;
-        case 'submit_live_exam':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/submit`;
-            break;
-        case 'update_live_exam_activity':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/activity`;
-            break;
-        case 'get_live_exam_results':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/results`;
-            break;
-        case 'get_live_exam_chat':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/chat`;
-            break;
-        case 'send_live_exam_chat_message':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/chat/message`;
-            break;
-        case 'send_live_exam_announcement':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/chat/announcement`;
-            break;
-        case 'update_live_exam_chat_settings':
-            method = 'PUT';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/chat/settings`;
-            break;
-        case 'hide_live_exam_chat_message':
-            method = 'PUT';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/chat/${encodeURIComponent(payload.messageId)}/hide`;
-            break;
-        case 'track_live_exam_timing':
-            method = 'POST';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/track-timing`;
-            break;
-        case 'get_live_exam_analytics':
-            method = 'GET';
-            path = `/api/live-exam/${encodeURIComponent(payload.sessionId)}/analytics`;
-            break;
-
         // --- Legacy Homework Center (temporary allowlist only) ---
         case 'get_hw_assignments':
         case 'save_hw_assignment':
@@ -283,8 +209,7 @@ export const callApi = async <T = any>(action: string, payload: Record<string, a
                           path.startsWith('/api/leaderboard') ||
                           path.startsWith('/api/game-state') ||
                           path.startsWith('/api/gift-shop') ||
-                          path.startsWith('/api/shop') ||
-                          path.startsWith('/api/live-exam');
+                          path.startsWith('/api/shop');
 
         if (!isJWTRoute && API_SECRET_TOKEN) {
             (fetchOptions.headers as Record<string, string>)['X-API-Token'] = API_SECRET_TOKEN;
