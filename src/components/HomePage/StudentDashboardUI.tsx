@@ -840,7 +840,7 @@ const StudentDashboardUI: React.FC<StudentDashboardUIProps> = ({ ioeQuizzes = []
                     <div className="flex items-center gap-3">
                         <img src="/school-logo.png" alt="School logo ToHieu Quiz" className="w-10 h-10 object-contain drop-shadow-md" />
                         <span className="text-xl md:text-2xl font-black tracking-tight text-slate-800">
-                            ÍtOng<span className="text-orange-500">Quiz</span>
+                            TôHiệu<span className="text-orange-500">Quiz</span>
                         </span>
                     </div>
 
