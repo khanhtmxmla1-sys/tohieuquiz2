@@ -35,7 +35,7 @@ const AboutPage: React.FC = () => {
                         onClick={() => navigate('/')}
                         className="font-black text-[#064E3B] tracking-tight text-xl hover:text-green-600 transition-colors"
                     >
-                        ÍtOng<span className="text-orange-500">Quiz</span>
+                        TôHiệu<span className="text-orange-500">Quiz</span>
                     </button>
                     <div className="flex items-center gap-2">
                         <button
@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
                             Giới thiệu nhà trường
                         </p>
                         <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 tracking-tight">
-                            Trường Tiểu học Ít Ong
+                            Trường Tiểu học Tô Hiệu
                         </h1>
                         <p className="text-green-50 text-base md:text-xl leading-relaxed font-medium opacity-90">
                             Chúng tôi xây dựng môi trường học tập an toàn, nhân ái và truyền cảm hứng.

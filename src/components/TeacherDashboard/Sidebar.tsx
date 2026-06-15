@@ -143,7 +143,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl bg-white p-1.5 flex items-center justify-center border border-slate-200 shadow-sm">
                             <img
-                                src="/shool-logo1-removebg.png"
+                                src="/tohieu-logo.png"
                                 alt={`Logo ${SCHOOL_NAME}`}
                                 className="w-full h-full object-contain"
                             />

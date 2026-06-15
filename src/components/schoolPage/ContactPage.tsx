@@ -19,7 +19,7 @@ const ContactPage: React.FC = () => {
                         onClick={() => navigate('/')}
                         className="font-black text-[#064E3B] tracking-tight text-xl hover:text-green-600 transition-colors"
                     >
-                        ÍtOng<span className="text-orange-500">Quiz</span>
+                        TôHiệu<span className="text-orange-500">Quiz</span>
                     </button>
                     <div className="flex items-center gap-2">
                         <button
@@ -49,7 +49,7 @@ const ContactPage: React.FC = () => {
                     <div className="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-white/10 blur-3xl" />
                     <div className="absolute -bottom-16 -left-10 w-48 h-48 rounded-full bg-lime-300/20 blur-2xl" />
                     <div className="relative z-10 max-w-3xl">
-                        <h1 className="text-3xl md:text-5xl font-black mb-5 leading-tight tracking-tight">Kết nối với Trường Tiểu học Ít Ong</h1>
+                        <h1 className="text-3xl md:text-5xl font-black mb-5 leading-tight tracking-tight">Kết nối với Trường Tiểu học Tô Hiệu</h1>
                         <p className="text-green-50 text-base md:text-lg font-medium opacity-90 max-w-2xl leading-relaxed">
                             Nhà trường luôn sẵn sàng tiếp nhận thông tin từ phụ huynh và học sinh.
                             Bạn có thể gọi hotline, nhắn tin Zalo hoặc kết nối qua fanpage.

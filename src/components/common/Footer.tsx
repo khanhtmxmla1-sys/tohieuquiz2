@@ -36,7 +36,7 @@ const Footer: React.FC<Props> = ({ onNavigate, showPublicLinks = true }) => {
                             onClick={() => onNavigate('/')}
                         >
                             <img 
-                                src="/shool-logo1-removebg.png" 
+                                src="/tohieu-logo.png" 
                                 alt="logo" 
                                 className="w-10 h-10 object-contain"
                                 onError={(e) => { (e.target as HTMLImageElement).src = '/school-logo.png'; }}
