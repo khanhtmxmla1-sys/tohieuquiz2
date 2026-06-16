@@ -8,6 +8,7 @@ compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 preview_urls = false
+migrations_dir = "./migrations"
 
 [[d1_databases]]
 binding = "DB"

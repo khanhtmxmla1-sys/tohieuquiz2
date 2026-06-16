@@ -2,6 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "it-ong-primary-school-quiz-app",
 	"compatibility_date": "2026-06-14",
+	"migrations_dir": "workers/migrations",
 	"observability": {
 		"enabled": true
 	},
