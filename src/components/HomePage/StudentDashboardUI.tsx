@@ -917,9 +917,11 @@ const StudentDashboardUI: React.FC<StudentDashboardUIProps> = ({ ioeQuizzes = []
                     <div className="flex items-center gap-8">
                         <div className="md:hidden font-bold text-[#004AC6] text-xl">TôHiệuQuiz</div>
                         <nav className="hidden md:flex items-center gap-3">
-                            <button type="button" className="rounded-xl px-3 py-2 text-sm font-black text-[#004AC6] border-b-2 border-[#004AC6] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EAF2FF] hover:shadow-sm">Cấp bậc</button>
+                            <button type="button" className="rounded-xl px-3 py-2 text-sm font-black text-[#004AC6] border-b-2 border-[#004AC6] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EAF2FF] hover:shadow-sm">
+                                Cấp bậc {pet?.level ?? 1}
+                            </button>
                             <button type="button" className="rounded-xl px-3 py-2 text-sm font-bold text-[#27344D] flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EAF2FF] hover:text-[#004AC6] hover:shadow-sm">
-                                <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" /> {coins} Xu
+                                <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" /> {coins.toLocaleString()} Xu
                             </button>
                             {giftShopEnabled && (
                                 <button type="button" onClick={handleOpenGiftShop} className="rounded-xl px-3 py-2 text-sm font-bold text-[#27344D] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EAF2FF] hover:text-[#004AC6] hover:shadow-sm">Tiệm Tạp Hóa</button>
