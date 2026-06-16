@@ -113,3 +113,47 @@ Uses default label vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, 
 ### Domain docs
 
 Single-context repo: `CONTEXT.md` at root + `docs/adr/` for architecture decisions. See `docs/agents/domain.md`.
+
+### Git workflow
+
+**ALWAYS commit and push after completing tasks:**
+
+1. **After fixing bugs, adding features, or creating documentation:**
+   ```bash
+   git add <files>
+   git commit -m "type: descriptive message"
+   git push tohieuquiz1 main
+   git push tohieuquiz2 main
+   ```
+
+2. **Commit message format:**
+   - `fix:` - Bug fixes
+   - `feat:` - New features
+   - `docs:` - Documentation changes
+   - `refactor:` - Code refactoring
+   - `chore:` - Build/config changes
+
+3. **Multi-line commits for complex changes:**
+   ```bash
+   git commit -m "type: summary" \
+              -m "- Detail 1" \
+              -m "- Detail 2" \
+              -m "- Detail 3"
+   ```
+
+4. **Dual remotes:**
+   - This repo syncs to TWO GitHub repositories
+   - `tohieuquiz1`: https://github.com/khanhtmxmla1-sys/tohieuquiz1.git
+   - `tohieuquiz2`: https://github.com/khanhtmxmla1-sys/tohieuquiz2.git
+   - **MUST push to BOTH after every commit**
+
+5. **Verification:**
+   ```bash
+   git status  # Check clean working tree
+   git log -1  # Verify commit message
+   ```
+
+**When NOT to commit:**
+- Temporary/experimental changes
+- Work in progress (WIP) unless user explicitly requests it
+- Changes that break tests (fix first, then commit)
