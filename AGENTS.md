@@ -122,7 +122,6 @@ Single-context repo: `CONTEXT.md` at root + `docs/adr/` for architecture decisio
    ```bash
    git add <files>
    git commit -m "type: descriptive message"
-   git push tohieuquiz1 main
    git push tohieuquiz2 main
    ```
 
@@ -141,11 +140,9 @@ Single-context repo: `CONTEXT.md` at root + `docs/adr/` for architecture decisio
               -m "- Detail 3"
    ```
 
-4. **Dual remotes:**
-   - This repo syncs to TWO GitHub repositories
-   - `tohieuquiz1`: https://github.com/khanhtmxmla1-sys/tohieuquiz1.git
-   - `tohieuquiz2`: https://github.com/khanhtmxmla1-sys/tohieuquiz2.git
-   - **MUST push to BOTH after every commit**
+4. **Remote:**
+   - This repo syncs to: `tohieuquiz2` (https://github.com/khanhtmxmla1-sys/tohieuquiz2.git)
+   - **MUST push after every commit**
 
 5. **Verification:**
    ```bash
